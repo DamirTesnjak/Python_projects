@@ -19,7 +19,7 @@ grid = [[" ", " ", " ", " ", " ", " ", " "],
         [" ", " ", " ", " ", " ", " ", " "]]
 
 def player(grid):
-    playerChoice = int(raw_input("\n\n          Vstavite zeton (1-7):"))
+    playerChoice = int(raw_input("\n\nVstavite zeton (1-7):"))
 
     token = "X"
     target = playerChoice
@@ -51,37 +51,37 @@ def start():
     while True:
         if choose == 0:
             if player(grid) == True:
-                print "          Zmagali ste!"
+                print "Zmagali ste!"
                 pressToContinue = raw_input("\n\n'ENTER' za izhod:").lower()
                 if pressToContinue == "":
                     break
             if ifGridFull(grid) == True:
-                print "          Neodloceno!"
+                print "Neodloceno!"
                 pressToContinue = raw_input("\n\n'ENTER' za izhod:").lower()
                 if pressToContinue == "":
 				    break
             choose = 1
         else:
             if Ai(grid) == False:
-                print "          Racunalnik je zmagal!"
+                print "Racunalnik je zmagal!"
                 pressToContinue = raw_input("\n\n'ENTER' za izhod:").lower()
                 if pressToContinue == "":
                     break
             if ifGridFull(grid) == True:
-                print "          Neodloceno!"
+                print "Neodloceno!"
                 pressToContinue = raw_input("\n\n'ENTER' za izhod:").lower()
                 if pressToContinue == "":
                     break
             choose = 0
 
-print "\n          ----STIRI V VRSTO----\n          by Damir Tesnjak"
-pressToContinue = raw_input("\n\n\n          'ENTER' za nadaljevanje: ").lower()
+print "\n----STIRI V VRSTO----\nby Damir Tesnjak"
+pressToContinue = raw_input("\n\n\n'ENTER' za nadaljevanje: ").lower()
 
 if pressToContinue == "":
     os.system('cls')
 
-print "          Player: X\n          Ai: O\n"
-pressToContinue = raw_input("\n\n\n          'ENTER' za nadaljevanje: ").lower()
+print "Player: X\nAi: O\n"
+pressToContinue = raw_input("\n\n\n'ENTER' za nadaljevanje: ").lower()
 
 if pressToContinue == "":
     os.system('cls')
